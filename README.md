@@ -1,6 +1,6 @@
 # phenix40
 
-![phenix40_0.1](Layouts/phenix40_0.1.png)
+![phenix40_1.0](Layout/phenix40_1.0.jpg)
 
 Are you tired of proprietary switches, unnecessary software, layout quirks, and bulky keyboards? I was, so I decided to create my own.
 
@@ -15,7 +15,7 @@ The firmware offer maximum compatibility, it work on any OS with keyboard suppor
 
 ## Layout
 
-![Keyboard layout](Layouts/phenix40_full.png)
+![Keyboard layout](Layout/phenix40_full.png)
 
 ### Hidden characters:
 - Home Row Modifiers and Special Characters (Hold the key):
