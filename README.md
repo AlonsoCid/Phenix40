@@ -1,4 +1,4 @@
-# phenix40
+# Phenix40
 
 ![phenix40_1.0](Layout/phenix40_1.0.jpg)
 
