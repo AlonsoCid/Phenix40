@@ -19,7 +19,8 @@ enum {
     TD_O,
     TD_U,
     TD_SLSH,
-    TD_P
+    TD_P,
+    TD_ESC
 };
 
 // Tap Dance States
@@ -141,6 +142,19 @@ void p_finished(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void esc_finished(tap_dance_state_t *state, void *user_data) {
+    cur_td_state = cur_dance(state);
+    switch (cur_td_state) {
+        case TD_SINGLE_TAP: 
+            tap_code(KC_ESC); 
+            break;
+        case TD_HOLD: 
+            tap_code(KC_CAPS); 
+            break;
+        default: break;
+    }
+}
+
 /* --- Action Definitions --- */
 
 tap_dance_action_t tap_dance_actions[] = {
@@ -151,16 +165,17 @@ tap_dance_action_t tap_dance_actions[] = {
     [TD_U] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, u_finished, NULL),
     [TD_SLSH] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, slsh_finished, NULL),
     [TD_P]    = ACTION_TAP_DANCE_FN_ADVANCED(NULL, p_finished, NULL),
+    [TD_ESC]  = ACTION_TAP_DANCE_FN_ADVANCED(NULL, esc_finished, NULL),
 };
 
 enum layers { _BASE = 0, _MOD1, _MOD2 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
-        KC_TAB,  KC_Q,     KC_W,         TD(TD_E),     KC_R,         KC_T,      KC_Y,      TD(TD_U),     TD(TD_I),     TD(TD_O),     TD(TD_P),    KC_DEL,
-        KC_ESC,  TD(TD_A), LCTL_T(KC_S), LGUI_T(KC_D), LALT_T(KC_F), KC_G,      KC_H,      RALT_T(KC_J), RGUI_T(KC_K), RCTL_T(KC_L), KC_SCLN,     KC_ENT,
-        KC_LSFT, KC_Z,     KC_X,         KC_C,         KC_V,         KC_B,      KC_N,      KC_M,         KC_COMM,      KC_DOT,       TD(TD_SLSH), KC_RSFT,
-                                                       KC_SPC,       MO(_MOD2), MO(_MOD1), KC_BSPC
+        KC_TAB,     KC_Q,     KC_W,         TD(TD_E),     KC_R,         KC_T,      KC_Y,      TD(TD_U),     TD(TD_I),     TD(TD_O),     TD(TD_P),    KC_DEL,
+        TD(TD_ESC), TD(TD_A), LCTL_T(KC_S), LGUI_T(KC_D), LALT_T(KC_F), KC_G,      KC_H,      RALT_T(KC_J), RGUI_T(KC_K), RCTL_T(KC_L), KC_SCLN,     KC_ENT,
+        KC_LSFT,    KC_Z,     KC_X,         KC_C,         KC_V,         KC_B,      KC_N,      KC_M,         KC_COMM,      KC_DOT,       TD(TD_SLSH), KC_RSFT,
+                                                          KC_SPC,       MO(_MOD2), MO(_MOD1), KC_BSPC
     ),
 
     [_MOD1] = LAYOUT(
