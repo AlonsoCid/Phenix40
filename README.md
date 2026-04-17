@@ -8,10 +8,10 @@ The Phenix40 is a semi-split, layer-based, repairable, and ergonomic mechanical 
 
 If you speak multiple languages, you know the struggle of typing awkward combinations or hunting online for characters like ß, ç, or ñ. This keyboard eliminates the frustration of "dead keys" for accents (especially in French and Spanish) and makes coding symbols like ~ and | instantly accessible.
 
-Despite having only just 40 keys, it handle any Western European language symbol within one or two keystrokes. As long as you are using the Latin alphabet, you're covered.
+Despite having only just 40 keys, it handles any Western European language symbol within one or two keystrokes. As long as you are using the Latin alphabet, you're covered.
 
 ### Layout: US_international
-The firmware offer maximum compatibility, it work on any OS with keyboard support (Windows, Linux, Mac, Android, FreeBSD, etc). But you need to select the US_international layout, as it is the only one with all Western European characters.
+The firmware offers maximum compatibility, it work on any OS with keyboard support (Windows, Linux, Mac, Android, FreeBSD, etc). But you need to select the US_international layout, as it is the only one with all Western European characters.
 
 ## Layout
 
@@ -41,4 +41,8 @@ For Linux, Mac, or manual setups, see the [ QMK Build Environment Setup](https:/
 ## Bootloader
 
 **Physical reset button**: Unscrew the chip cover, hold BOOT and press RESET. 
-**Note**: Be aware this will whipe the firmware and reset the chip, use it only when the QMK terminal tells you to!
+**Note**: Be aware this will wipe the firmware and reset the chip, use it only when the QMK terminal tells you to!
+
+## Acknowledgments
+
+Special thanks to [Pedro Dearo](https://github.com/Aracnoide) and Juanjose Lopez for their invaluable contributions to the design and hardware testing of this project.
