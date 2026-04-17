@@ -45,4 +45,4 @@ For Linux, Mac, or manual setups, see the [ QMK Build Environment Setup](https:/
 
 ## Acknowledgments
 
-Special thanks to [Pedro Dearo](https://github.com/Aracnoide) and Juanjose Lopez for their invaluable contributions to the design and hardware testing of this project.
+Special thanks to [Pedro Dearo](https://github.com/Aracnoide) and Juan José López for their invaluable contributions to the design and hardware testing of this project.
