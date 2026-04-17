@@ -1,6 +1,6 @@
 # Phenix40
 
-![phenix40_1.0](Layout/phenix40_1.0.jpg)
+![phenix40_1.0](Layout/phenix40_1.0.png)
 
 Are you tired of proprietary switches, unnecessary software, layout quirks, and bulky keyboards? I was, so I decided to create my own.
 
